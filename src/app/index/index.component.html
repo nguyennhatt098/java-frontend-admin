@@ -1,0 +1,73 @@
+<div class="container-fluid" >
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+          <div class="inner">
+            <h3>{{statistic.countOrder}}</h3>
+
+            <p> Orders Product</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-bag"></i>
+          </div>
+          <a routerLink="/order" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-success">
+          <div class="inner">
+            <h3>{{statistic.countReview}}</h3>
+
+            <p> Rating Product</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-star"></i>
+          </div>
+          <a href="javascript:void(0)" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-warning">
+          <div class="inner">
+            <h3>{{statistic.countUser}}</h3>
+
+            <p>User Registrations</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-person-add"></i>
+          </div>
+          <a  routerLink="/user"  class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+         
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-danger">
+          <div class="inner">
+            <h3>{{statistic.countWishList}}</h3>
+
+            <p>Product Favorites</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-heart"></i>
+          </div>
+          <a href="javascript:void(0)" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+    </div>
+    <!-- /.row -->
+
+    <div id="chart-container" style="padding-bottom: 50px;">
+      <h1>Purchase situation of the year {{year}} </h1>
+      <canvas #myCanvas id="canvas" baseChart [chartType]="chartType" [datasets]="chartData" [labels]="chartLabels" [colors]="chartColors" [options]="chartOptions"></canvas>
+    </div>
+    <!-- /.row (main row) -->
+  </div><!-- /.container-fluid -->

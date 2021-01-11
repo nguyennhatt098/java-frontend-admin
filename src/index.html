@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Admin</title>
+  <base href="/">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body >
+<!-- Site wrapper -->
+<app-root></app-root>
+
+</body>
+<!-- <script src="assets/plugins/jquery/jquery.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/dist/js/adminlte.min.js"></script> -->
+<!-- AdminLTE for demo purposes -->
+<!-- <script src="assets/dist/js/demo.js"></script> -->
+<script>
+ function changeMenu(){
+    var element = document.querySelector(".sidebar-mini");
+    if(element.classList.contains("sidebar-open")){
+      element.classList.remove("sidebar-collapse");
+      element.classList.add("sidebar-close");
+      element.classList.remove("sidebar-open");
+    } else{
+      element.classList.add("sidebar-collapse");
+      element.classList.add("sidebar-open");
+      element.classList.remove("sidebar-close");
+    }
+  }
+ function hideMenu(){
+  var element = document.querySelector(".sidebar-mini");
+  element.classList.remove("sidebar-open");
+  element.classList.add("sidebar-close");
+ }
+</script>
+</html>
