@@ -1,17 +1,10 @@
 {
   "hosting": {
-    "target": "oganic-shopping",
     "public": "dist/java-frontend",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
